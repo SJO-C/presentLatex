@@ -25,6 +25,8 @@
 % modify this file as you see fit and even to delete this copyright
 % notice. 
 
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
 
 \mode<presentation>
 {
@@ -215,7 +217,40 @@ Which would output:\\$\frac{12+144+20+3\sqrt{4}}{7} + 9 \times 11 = 9^2 + 0$
 \end{frame}
 
 \begin{frame}{Further Reading}
-\url{https://en.wikibooks.org/wiki/LaTeX}
+\begin{itemize}
+\item \url{https://en.wikibooks.org/wiki/LaTeX}
+\item \url{https://www.overleaf.com/learn}
+\item \url{https://www.overleaf.com/latex/templates/university-of-lincoln-computer-science-undergraduate-thesis-template-unofficial/zdsxjctkvtxq}
+\item \url{https://www.overleaf.com/latex/templates/the-university-of-lincoln-computer-science-report/kkvstcrvsccv}
+
+\end{itemize}
 \end{frame}
 
+\begin{frame}{Accents Reference}
+\tiny{
+\begin{table}[]
+\begin{tabular}{lll}
+\multicolumn{1}{c}{\textbf{LaTeX command}} & \multicolumn{1}{c}{\textbf{Sample}} & \multicolumn{1}{c}{\textbf{Description}} \\
+\textbackslash{}`\{o\} & \`{o} & grave accent \\
+\textbackslash{}'\{o\} & \'{o} & acute accent \\
+\textbackslash{}\textasciicircum{}\{o\} & \^{o} & circumflex \\
+\textbackslash{}"\{o\} & \"{o} & umlaut, trema or dieresis \\
+\textbackslash{}H\{o\} & \H{o} & long Hungarian umlaut (double acute) \\
+\textbackslash{}$\sim$\{o\} & \~{o} & tilde \\
+\textbackslash{}c\{c\} &\c{o} & cedilla \\
+\textbackslash{}k\{a\} & \k{o} & ogonek \\
+\textbackslash{}l\{\} & \l{l} & barred l (l with stroke) \\
+\textbackslash{}=\{o\} & \={o} & macron accent (a bar over the letter) \\
+\textbackslash{}.\{o\} & \.{o} & dot over the letter \\
+\textbackslash{}d\{u\} & ụ\d{o}& dot under the letter \\
+\textbackslash{}r\{a\} & \r{a} & ring over the letter (for å there is also the special command \textbackslash{}aa) \\
+\textbackslash{}u\{o\} & \u{o} & breve over the letter \\
+\textbackslash{}v\{s\} & \v{s} & caron/háček ("v") over the letter \\
+\textbackslash{}o\{\} & \o{} & slashed o (o with stroke) \\
+\{\textbackslash{}i\} & \i{} & dotless i (i without tittle)
+\end{tabular}
+\caption{Table of Accent Escapes}
+\label{tabAccentChars}
+\end{table}}
+\end{frame}
 \end{document}
