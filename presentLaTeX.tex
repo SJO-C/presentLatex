@@ -1,0 +1,221 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This file is a template using the "beamer" package to create slides for a talk or presentation
+% - Giving a talk on some subject.
+% - The talk is between 15min and 45min long.
+% - Style is ornate.
+
+% MODIFIED by Jonathan Kew, 2008-07-06
+% The header comments and encoding in this file were modified for inclusion with TeXworks.
+% The content is otherwise unchanged from the original distributed with the beamer package.
+
+\documentclass{beamer}
+\usepackage{cleveref}
+\usepackage{listings}
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU General Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice. 
+
+
+\mode<presentation>
+{
+  \usetheme{Luebeck}
+  % or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+\usepackage{hyperref}
+
+%\usepackage[english]{babel}
+% or whatever
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+
+\title[] % (optional, use only with long paper titles)
+{Welcome to \LaTeX.}
+
+\subtitle
+{A Brief Intro into the World of \LaTeX} % (optional)
+
+\author[] % (optional, use only with lots of authors)
+{Sam~Orman-Chan\inst{1} \and Alex~Elwell\inst{1}}
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[University of Lincoln] % (optional, but mostly needed)
+{
+  \inst{1}%
+  School of Computer Science}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date[] % (optional)
+{27\textsuperscript{th} February 2023 / Enhancement Week 2023}
+
+\subject{LaTeX How do I do it?}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+\pgfdeclareimage[height=1cm]{university-logo}{./uniLincs.jpg}
+\logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+
+% Since this a solution template for a generic talk, very little can
+% be said about how it should be structured. However, the talk length
+% of between 15min and 45min and the theme suggest that you stick to
+% the following rules:  
+
+% - Exactly two or three sections (other than the summary).
+% - At *most* three subsections per section.
+% - Talk about 30s to 2min per frame. So there should be between about
+%   15 and 30 frames, all told.
+
+\section{What is \LaTeX}
+
+\begin{frame}{What is LaTeX?}{Not the Fetish Society Sort.}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
+\emph{Pronounced as Lay-Teck}
+  \begin{itemize}
+  \item
+   \LaTeX~is a Typesetting System.
+  \begin{itemize}\item Meaning it is software used to define how a written document is laid out.
+  \item It is often used in academic writing, particularly in academic papers and reports.
+  \item \LaTeX~is also used to write Books, letters, CVs \& even Presentations (Including this One).
+   \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Why?}{Why use \LaTeX?}
+\begin{itemize}
+\item \LaTeX~is a ``What You See is What You Mean'' Document Processing \& Typesetting System.
+\item This is opposed to the Ubiquitous ``What You See is What You Get'' paradigm employed by tools like Microsoft Word or LibreOffice.
+\item The Result of this Difference is with \LaTeX, you use special `escape sequences' and `commands' to describe your document layout whilst you write your document. 
+\item Allowing you to focus on your writing whilst the Compiler focuses on the Layout.
+\end{itemize}
+\end{frame}
+
+\section{What you need to Begin.}
+\subsection{First Steps}
+\begin{frame}{Editors \& Compilers}
+\LaTeX~is an Open Source Project with a variety of Distributions available for its usage. Examples Include:\\
+\begin{itemize}
+
+\item Overleaf --- An Online \LaTeX Editor \& Compiler.
+\item MikTeX --- A Native Instance for Windows, macOS \& Linux. (Sam's Personal Favourite for Windows)
+\item MacTeX --- A Native Instance for Mac\footnote{MacTeX \& TeXLive have  very Large Storage Footprints (4GB+) as they locally store and maintain entire copies of the CTAN locally.{\label{fn1}}}
+\item TexLive --- A Native Cross-Platform Version for just about anything.\textsuperscript{1}
+\item VerbTex --- An Android Instance.
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Overleaf}
+For the Ease of Learning \& so you don't need to download any software, we will be using Overleaf, however the Syntax is the Same Across the different \LaTeX~Distributions.
+\begin{enumerate}
+\item Create an Account on Overleaf. You can use your University Email Here.
+\item Next create a Project In Overleaf. This is a bit like a folder where you will store all files relating to the document. Here we will start with selecting ``Blank Project''.
+\item Now you are Ready. Please shout if you have any issues.
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Your First Document}
+When You create your Black Project you will be presented with a split screen of \LaTeX~Source Code \& the PDF Output.\par Overleaf helpfully provides a bit of code like this to get you started:\\
+\lstinputlisting[language=TeX]{./example.tex}
+\end{frame}
+
+\begin{frame}{Edit the Code}
+You may notice that editing the code does not result in the preview updating. This is as \LaTeX~is a compiled Language and as such, you will need to click Recompile in Overleaf before you can see your changes.\par
+Begin by Typing on the line below ``\textbackslash begin\{document\}'' line. Try adding some newlines and some text.
+\end{frame}
+
+\subsection{Escape Sequences}
+
+\begin{frame}{Escape Sequences}
+You have probably noticed that no matter how many newlines you put in, the spacing on the output doesn't seem to change. This is as \LaTeX~treats newlines a bit differently to how Word does.\par
+In fact there are a couple ways to add vertical space between lines. You can use a double backslash or a backslash `par', with the difference being that the latter also indents the next line to make paragraph demarcation a little more obvious.
+\end{frame}
+
+\begin{frame}{Accents}
+You may also note that typing characters with accents results in errors. This is as to type an accented character, like \~o or \^h you must escape it. This is done by:
+\begin{enumerate}
+\item Typing \textbackslash~and the character that best matches the accent. Such as \^~ for a circumflex, a ``~for an umlaut or a `c' for cedilla. 
+\item The, without a space between them, type the letter you want accenting.
+\end{enumerate}\par~
+\emph{Note:} If you wish to type the \pounds~sign, you must type ``backslash pounds''.\\
+If you notice that spacing is weird between your escaped characters and your normal ones, swap the space at then end of the sequence with a tilde (\textasciitilde{}).
+\end{frame}
+
+\subsection{Structure}
+
+\begin{frame}{Document Structures}
+In \LaTeX~Documents have a number of attributes, mostly declared in the Preamble, the area before the backslash begin\{document\} line. In this area you declare any packages you are going to use, any parameters for the packages, general document parameters like paper size or document class. Document Class is arguably one of the most important preamble commands, as the class of the document determines which commands \& structures you may use as well as how the document will look overall. For instance, the Overleaf project you have made is an Article, whilst this Presentation is a Beamer Class document. Other Classes you can access include classes for Letters, Books and even an University of Lincoln Thesis. 
+\end{frame}
+
+\begin{frame}{Referencing}
+\LaTeX~has both inbuilt and external Referencing Tools that are highly customisable. You can use the inbuilt referencing tool by using the cite command (obviously escaped) or a BibTex/BibLaTeX file and the appropriate post-processor. Please see the Further Reading for information on Referencing though as it can become very, very in depth.
+\end{frame}
+
+\section{Extras}
+\begin{frame}{The Maths ``Environment''}
+The Maths Environment is a special area of your document that you start and end with \$ signs. Between the \$ you can use \LaTeX~Maths Notation to write even very complex maths very easily. For instance, if I wanted to write ``12 plus 144 plus 20 plus 3 times the square root of 4, divided by 7, all added to 5 times 11 is equal to 9 squared plus 0'' I could write:\\ ``\$ \textbackslash frac\{12 + 144 + 20 + 3 \textbackslash sqrt \{4\}\}\{7\}  + 9 \textbackslash times 11 = 9\textsuperscript{2} \textbackslash + 0 \$''\\
+Which would output:\\$\frac{12+144+20+3\sqrt{4}}{7} + 9 \times 11 = 9^2 + 0$
+\end{frame}
+
+\begin{frame}{Further Reading}
+\url{https://en.wikibooks.org/wiki/LaTeX}
+\end{frame}
+
+\end{document}

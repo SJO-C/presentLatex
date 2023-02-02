@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{What is \LaTeX }{3}{0}{1}
+\beamer@sectionintoc {2}{What you need to Begin.}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{First Steps}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{Escape Sequences}{10}{0}{2}
+\beamer@subsectionintoc {2}{3}{Structure}{13}{0}{2}
+\beamer@sectionintoc {3}{Extras}{16}{0}{3}
