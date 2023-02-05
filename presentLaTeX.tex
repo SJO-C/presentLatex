@@ -13,6 +13,7 @@
 \documentclass{beamer}
 \usepackage{cleveref}
 \usepackage{listings}
+\usepackage{qrcode}
 % Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
 %
 % In principle, this file can be redistributed and/or modified under
@@ -56,14 +57,13 @@
 {A Brief Intro into the World of \LaTeX} % (optional)
 
 \author[] % (optional, use only with lots of authors)
-{Sam~Orman-Chan\inst{1} \and Alex~Elwell\inst{1}}
+{Sam~Orman-Chan \and Alex~Elwell}
 % - Use the \inst{?} command only if the authors have different
 %   affiliation.
 
-\institute[University of Lincoln] % (optional, but mostly needed)
-{
-  \inst{1}%
-  School of Computer Science}
+\institute[] % (optional, but mostly needed)
+{%
+ University of Lincoln School of Computer Science}
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
 
@@ -208,22 +208,28 @@ In \LaTeX~Documents have a number of attributes, mostly declared in the Preamble
 
 \begin{frame}{Referencing}
 \LaTeX~has both inbuilt and external Referencing Tools that are highly customisable. You can use the inbuilt referencing tool by using the cite command (obviously escaped) or a BibTex/BibLaTeX file and the appropriate post-processor. Please see the Further Reading for information on Referencing though as it can become very, very in depth.
+\begin{figure}[h]
+\qrcode[hyperlink,height=2.5cm]{https://lncn.ac/w8j1d}\\
+Further Reading on Referencing in \LaTeX.
+\end{figure}
 \end{frame}
 
-\section{Extras}
+\section{Further Readings \& Useful Commands}
 \begin{frame}{The Maths ``Environment''}
 The Maths Environment is a special area of your document that you start and end with \$ signs. Between the \$ you can use \LaTeX~Maths Notation to write even very complex maths very easily. For instance, if I wanted to write ``12 plus 144 plus 20 plus 3 times the square root of 4, divided by 7, all added to 5 times 11 is equal to 9 squared plus 0'' I could write:\\ ``\$ \textbackslash frac\{12 + 144 + 20 + 3 \textbackslash sqrt \{4\}\}\{7\}  + 9 \textbackslash times 11 = 9\textsuperscript{2} \textbackslash + 0 \$''\\
 Which would output:\\$\frac{12+144+20+3\sqrt{4}}{7} + 9 \times 11 = 9^2 + 0$
 \end{frame}
 
 \begin{frame}{Further Reading}
-\begin{itemize}
-\item \url{https://en.wikibooks.org/wiki/LaTeX}
-\item \url{https://www.overleaf.com/learn}
-\item \url{https://www.overleaf.com/latex/templates/university-of-lincoln-computer-science-undergraduate-thesis-template-unofficial/zdsxjctkvtxq}
-\item \url{https://www.overleaf.com/latex/templates/the-university-of-lincoln-computer-science-report/kkvstcrvsccv}
-
-\end{itemize}
+\begin{table}[]
+\begin{tabular}{ll}
+\url{https://en.wikibooks.org/wiki/LaTeX} & \qrcode[hyperlink,height=1cm]{https://en.wikibooks.org/wiki/LaTeX} \\\\
+\url{https://www.overleaf.com/learn} & \qrcode[hyperlink,height=1cm]{https://www.overleaf.com/learn} \\\\
+\url{https://lncn.ac/3p3t} & \qrcode[hyperlink,height=1cm]{https://lncn.ac/3p3t} \\\\
+\url{https://lncn.ac/zk1qu} & \qrcode[hyperlink,height=1cm]{https://lncn.ac/zk1qu}
+\end{tabular}
+\label{tabFurtherRead}
+\end{table}
 \end{frame}
 
 \begin{frame}{Accents Reference}
@@ -251,6 +257,17 @@ Which would output:\\$\frac{12+144+20+3\sqrt{4}}{7} + 9 \times 11 = 9^2 + 0$
 \end{tabular}
 \caption{Table of Accent Escapes}
 \label{tabAccentChars}
-\end{table}}
+\end{table}}%End Tiny
 \end{frame}
+
+\begin{frame}{Download this Presentation}
+\begin{centering}
+\begin{figure}[h]
+\qrcode[hyperlink,height=5cm]{https://github.com/SJO-C/presentLatex/raw/main/presentLaTeX.pdf}\\~\\
+\url{https://github.com/SJO-C/presentLatex/raw/main/presentLaTeX.pdf}
+\label{qrandLinkforPresent}
+\end{figure}
+\end{centering}
+\end{frame}
+
 \end{document}
