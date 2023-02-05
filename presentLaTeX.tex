@@ -107,12 +107,6 @@
   \titlepage
 \end{frame}
 
-\begin{frame}{Outline}
-  \tableofcontents
-  % You might wish to add the option [pausesections]
-\end{frame}
-
-
 % Since this a solution template for a generic talk, very little can
 % be said about how it should be structured. However, the talk length
 % of between 15min and 45min and the theme suggest that you stick to
@@ -204,6 +198,10 @@ If you notice that spacing is weird between your escaped characters and your nor
 
 \begin{frame}{Document Structures}
 In \LaTeX~Documents have a number of attributes, mostly declared in the Preamble, the area before the backslash begin\{document\} line. In this area you declare any packages you are going to use, any parameters for the packages, general document parameters like paper size or document class. Document Class is arguably one of the most important preamble commands, as the class of the document determines which commands \& structures you may use as well as how the document will look overall. For instance, the Overleaf project you have made is an Article, whilst this Presentation is a Beamer Class document. Other Classes you can access include classes for Letters, Books and even an University of Lincoln Thesis. 
+\end{frame}
+
+\begin{frame}{Environments}
+In \LaTeX~concepts like slides, centre-aligned areas, figures, lists \& tables are created within and using `Environments'. Environments are created using the \textbackslash\{begin\{Environment Type\}\} \&  \textbackslash\{end\} commands. The advantage of environments is that within them, you can use specialist commands and/or benefit from specialised formatting that is not available within the wider document environment. An example of this is the `itemize' environment that lets you create a bulleted list, and adds the  `\textbackslash item' command, which allows you to indicate that the piece of text is an item of the list.
 \end{frame}
 
 \begin{frame}{Referencing}
