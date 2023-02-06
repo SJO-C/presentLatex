@@ -196,12 +196,27 @@ If you notice that spacing is weird between your escaped characters and your nor
 
 \subsection{Structure}
 
-\begin{frame}{Document Structures}
-In \LaTeX~Documents have a number of attributes, mostly declared in the Preamble, the area before the backslash begin\{document\} line. In this area you declare any packages you are going to use, any parameters for the packages, general document parameters like paper size or document class. Document Class is arguably one of the most important preamble commands, as the class of the document determines which commands \& structures you may use as well as how the document will look overall. For instance, the Overleaf project you have made is an Article, whilst this Presentation is a Beamer Class document. Other Classes you can access include classes for Letters, Books and even an University of Lincoln Thesis. 
+\begin{frame}{The Preamble}
+In \LaTeX~Documents have a number of attributes, mostly declared in the Preamble, the area before the \textbackslash\{begin\{document\}\} line. In this area you declare any packages you are going to use, any parameters for the packages, general document parameters like paper size or document class. Document Class is arguably one of the most important preamble commands, as the class of the document determines which commands \& structures you may use as well as how the document will look overall. For instance, the Overleaf project you have made is an Article, whilst this Presentation is a Beamer Class document.
+\end{frame}
+
+\begin{frame}{Document Classes}
+
+In \LaTeX~the type of document you are writing is indicated with the Document Class. A Class determines the layout attributes of a document, such as whether it will include a postal address at the top or a page number at the bottom.\par
+Types of Document Class Include:\\
+\begin{itemize}
+\item Article --- The default for most. If in doubt, use this one.
+\item Letter --- Used for writing letters and other correspondence.
+\item Beamer --- Used for creating presentations like this.
+\item Book --- Used for creating books.
+\item KOMA Letter --- A variant of the Letter Class with the KOMA Macros.
+\item Memoir --- A variant of Book Class.
+\end{itemize}
+
 \end{frame}
 
 \begin{frame}{Environments}
-In \LaTeX~concepts like slides, centre-aligned areas, figures, lists \& tables are created within and using `Environments'. Environments are created using the \textbackslash\{begin\{Environment Type\}\} \&  \textbackslash\{end\} commands. The advantage of environments is that within them, you can use specialist commands and/or benefit from specialised formatting that is not available within the wider document environment. An example of this is the `itemize' environment that lets you create a bulleted list, and adds the  `\textbackslash item' command, which allows you to indicate that the piece of text is an item of the list.
+In \LaTeX~concepts like slides, centre-aligned areas, figures, lists \& tables are created within and using `Environments'. Environments are created using the \textbackslash\{begin\{Environment Type\}\} \&  \textbackslash\{end\} commands. With environments, you can use specialist commands and/or benefit from specialised formatting that is not available within the wider document environment. An example of this is the `itemize' environment that lets you create a bulleted list, and adds the  `\textbackslash item' command, which allows you to indicate that the piece of text is an item of the list.
 \end{frame}
 
 \begin{frame}{Referencing}
@@ -215,8 +230,23 @@ Further Reading on Referencing in \LaTeX.
 \section{Further Readings \& Useful Commands}
 \begin{frame}{The Maths ``Environment''}
 The Maths Environment is a special area of your document that you start and end with \$ signs. Between the \$ you can use \LaTeX~Maths Notation to write even very complex maths very easily. For instance, if I wanted to write ``12 plus 144 plus 20 plus 3 times the square root of 4, divided by 7, all added to 5 times 11 is equal to 9 squared plus 0'' I could write:\\ ``\$ \textbackslash frac\{12 + 144 + 20 + 3 \textbackslash sqrt \{4\}\}\{7\}  + 9 \textbackslash times 11 = 9\^{}{2} \textbackslash + 0 \$''\\
-Which would output:\\$\frac{12+144+20+3\sqrt{4}}{7} + 9 \times 11 = 9^2 + 0$
+Which would output:\begin{centering}\\$\frac{12+144+20+3\sqrt{4}}{7} + 9 \times 11 = 9^2 + 0$\end{centering}
 \end{frame}
+
+\begin{frame}{Images}
+In \LaTeX~Images are supported using the `graphicx' package. To use this package:\\
+\begin{enumerate}
+\item Declare `graphicx' in the preamble with the `usepackage' command.
+\item{Optional} Set the \textbackslash graphicspath to the directory where images/graphics are kept.
+\item At the location you want the image to appear, type \textbackslash includegraphics[size either as a measurement of height and/or width, or scale]\{image path, either from the graphics path, the relative path to the \TeX~file or the absolute path from the drive root\}.
+\item Compile and check it looks right.
+
+
+\end{enumerate}
+
+
+\end{frame}
+
 
 \begin{frame}{Further Reading}
 \begin{table}[]
@@ -246,7 +276,7 @@ Which would output:\\$\frac{12+144+20+3\sqrt{4}}{7} + 9 \times 11 = 9^2 + 0$
 \textbackslash{}l\{\} & \l{l} & barred l (l with stroke) \\
 \textbackslash{}=\{o\} & \={o} & macron accent (a bar over the letter) \\
 \textbackslash{}.\{o\} & \.{o} & dot over the letter \\
-\textbackslash{}d\{u\} & ụ\d{o}& dot under the letter \\
+\textbackslash{}d\{u\} & \d{o}& dot under the letter \\
 \textbackslash{}r\{a\} & \r{a} & ring over the letter (for å there is also the special command \textbackslash{}aa) \\
 \textbackslash{}u\{o\} & \u{o} & breve over the letter \\
 \textbackslash{}v\{s\} & \v{s} & caron/háček ("v") over the letter \\
