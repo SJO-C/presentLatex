@@ -28,7 +28,10 @@
 
 \usepackage[normalem]{ulem}
 \useunder{\uline}{\ul}{}
-
+\usepackage{xcolor} 
+%\definecolor{LCNgold}{RGB}{255, 215, 0}
+\definecolor{LCNblue}{RGB}{0,33,71} 
+\usecolortheme[named=LCNblue]{structure}
 \mode<presentation>
 {
   \usetheme{Luebeck}
@@ -56,10 +59,10 @@
 {Welcome to \LaTeX.}
 
 \subtitle
-{A Brief Intro into the World of \LaTeX} % (optional)
+{The What, the Why, and the How of the Premier WYSIWYM Text Processor.} % (optional)
 
 \author[] % (optional, use only with lots of authors)
-{Sam~Orman-Chan \and Alex~Elwell}
+{Sam~Orman-Chan~\&~Alex~Elwell}
 % - Use the \inst{?} command only if the authors have different
 %   affiliation.
 
@@ -72,7 +75,7 @@
 \date[] % (optional)
 {27\textsuperscript{th} February 2023 / Enhancement Week 2023}
 
-\subject{LaTeX How do I do it?}
+\subject{LaTeX: The What? The Why? and The How?}
 % This is only inserted into the PDF information catalog. Can be left
 % out. 
 
@@ -84,6 +87,8 @@
 
 \pgfdeclareimage[height=1cm]{university-logo}{./uniLincs.jpg}
 \logo{\pgfuseimage{university-logo}}
+
+
 
 
 
@@ -109,6 +114,7 @@
   \titlepage
 \end{frame}
 
+
 % Since this a solution template for a generic talk, very little can
 % be said about how it should be structured. However, the talk length
 % of between 15min and 45min and the theme suggest that you stick to
@@ -120,7 +126,7 @@
 %   15 and 30 frames, all told.
 
 \section{What is \LaTeX}
-
+\subsection{What is \LaTeX}
 \begin{frame}{What is LaTeX?}{Not the Fetish Society Sort.}
   % - A title should summarize the slide in an understandable fashion
   %   for anyone how does not follow everything on the slide itself.
@@ -134,7 +140,7 @@
    \end{itemize}
   \end{itemize}
 \end{frame}
-
+\subsection{Why use \LaTeX}
 \begin{frame}{Why?}{Why use \LaTeX?}
 \begin{itemize}
 \item \LaTeX~is a ``What You See is What You Mean'' Document Processing \& Typesetting System.
@@ -193,14 +199,20 @@ You may also note that typing characters with accents results in errors. This is
 \item The, without a space between them, type the letter you want accenting.
 \end{enumerate}\par
 \emph{Note:} If you wish to type the \pounds~sign, you must type ``\textbackslash pounds''.\par
-If you notice that spacing is weird between your escaped characters and your normal ones, swap the space at then end of the sequence with a tilde (\textasciitilde).\par
+If you notice that spacing is weird between your escaped characters and your normal ones, swap the space immediately after the escape sequence with a tilde (\textasciitilde).\par
 \end{frame}
 
 \subsection{Structure}
-
-\begin{frame}{The Preamble}
-In \LaTeX~Documents have a number of attributes, mostly declared in the Preamble, the area before the \textbackslash\{begin\{document\}\} line. In this area you declare any packages you are going to use, any parameters for the packages, general document parameters like paper size or document class. Document Class is arguably one of the most important preamble commands, as the class of the document determines which commands \& structures you may use as well as how the document will look overall. For instance, the Overleaf project you have made is an Article, whilst this Presentation is a Beamer Class document.
+\begin{frame}{Your Preamble}
+When you use \LaTeX~you will notice that unlike a plain text or even a word doc, there are areas of the source file that are not output. The most important of these is the Preamble. \par
+This part of your document works a bit like a configuration file, instructing the \LaTeX~compiler on things like page size, document class, packages in use etc.\par
+%You can use your preamble to even add metadata to the pdf file output of your \LaTeX~source such as author name or keywords relating to your document. \par
+However, if you use a template, you rarely need to touch the preamble unless you use a package.
 \end{frame}
+
+%\begin{frame}{The Preamble}
+%In \LaTeX~Documents have a number of attributes, mostly declared in the Preamble, the area before the \textbackslash\{begin\{document\}\} line. In this area you declare any packages you are going to use, any parameters for the packages, general document parameters like paper size or document class. Document Class is arguably one of the most important preamble commands, as the class of the document determines which commands \& structures you may use as well as how the document will look overall. For instance, the Overleaf project you have made is an Article, whilst this Presentation is a Beamer Class document.
+%\end{frame}
 
 \begin{frame}{Document Classes}
 
@@ -217,7 +229,7 @@ Types of Document Class Include:\\
 
 \end{frame}
 
-\begin{frame}{Environments}
+\begin{frame}{Environments}%Bit Wordy.
 In \LaTeX~concepts like slides, centre-aligned areas, figures, lists \& tables are created within and using `Environments'. Environments are created using the \textbackslash\{begin\{Environment Type\}\} \&  \textbackslash\{end\} commands. With environments, you can use specialist commands and/or benefit from specialised formatting that is not available within the wider document environment. An example of this is the `itemize' environment that lets you create a bulleted list, and adds the  `\textbackslash item' command, which allows you to indicate that the piece of text is an item of the list.
 \end{frame}
 
@@ -289,6 +301,18 @@ In \LaTeX~Images are supported using the `graphicx' package. To use this package
 \label{tabAccentChars}
 \end{table}}%End Tiny
 \end{frame}
+
+\begin{frame}{Thanks to }
+\begin{itemize}
+
+\item Wikibooks Community for the Invaluable, Straightforward \& Comprehensive wiki-book on Learning \LaTeX
+\item Overleaf for Useful, Well Organised \& Detailed Support Articles on the \LaTeX~Language.
+\item \TeX~Stack Exchange for almost universally having answers to any questions that can arise from \LaTeX~Usage.
+
+\end{itemize}
+
+\end{frame}
+
 
 \begin{frame}{Download this Presentation}
 \begin{centering}
